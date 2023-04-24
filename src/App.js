@@ -1,19 +1,22 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/layout/Navbar";
-import Footer from "./components/layout/Footer";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import User from "./pages/User"
-import NotFound from "./pages/NotFound";
-import { GithubProvider } from "./context/github/GithubContext";
-import { AlertProvider } from "./context/alert/AlertContext";
-import Alert from "./components/layout/Alert";
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import User from './pages/User';
+import NotFound from './pages/NotFound';
+import { GithubProvider } from './context/github/GithubContext';
+import { AlertProvider } from './context/alert/AlertContext';
+import Alert from './components/layout/Alert';
+import Chat from './components/chat/Chat';
 
 function App() {
   return (
     <GithubProvider>
       <AlertProvider>
+        {/* <div className="bg-gray-100 min-h-screen">
+          <Chat />
+        </div> */}
         <Router>
           <div className='flex flex-col justify-between h-screen'>
             <Navbar/>
